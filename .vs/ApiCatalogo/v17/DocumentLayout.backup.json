@@ -1,0 +1,102 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\CSharp\\ApiCatalogoBase\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F3F3B8D5-E0F7-446C-8DE1-7EE67ABC56B4}|ApiCatalogo.csproj|d:\\csharp\\apicatalogobase\\estrategia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3F3B8D5-E0F7-446C-8DE1-7EE67ABC56B4}|ApiCatalogo.csproj|solutionrelative:estrategia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3F3B8D5-E0F7-446C-8DE1-7EE67ABC56B4}|ApiCatalogo.csproj|d:\\csharp\\apicatalogobase\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3F3B8D5-E0F7-446C-8DE1-7EE67ABC56B4}|ApiCatalogo.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3F3B8D5-E0F7-446C-8DE1-7EE67ABC56B4}|ApiCatalogo.csproj|d:\\csharp\\apicatalogobase\\itemcat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3F3B8D5-E0F7-446C-8DE1-7EE67ABC56B4}|ApiCatalogo.csproj|solutionrelative:itemcat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3F3B8D5-E0F7-446C-8DE1-7EE67ABC56B4}|ApiCatalogo.csproj|d:\\csharp\\apicatalogobase\\util.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3F3B8D5-E0F7-446C-8DE1-7EE67ABC56B4}|ApiCatalogo.csproj|solutionrelative:util.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3F3B8D5-E0F7-446C-8DE1-7EE67ABC56B4}|ApiCatalogo.csproj|d:\\csharp\\apicatalogobase\\arbolgeneral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3F3B8D5-E0F7-446C-8DE1-7EE67ABC56B4}|ApiCatalogo.csproj|solutionrelative:arbolgeneral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ArbolGeneral.cs",
+              "DocumentMoniker": "D:\\CSharp\\ApiCatalogoBase\\ArbolGeneral.cs",
+              "RelativeDocumentMoniker": "ArbolGeneral.cs",
+              "ToolTip": "D:\\CSharp\\ApiCatalogoBase\\ArbolGeneral.cs",
+              "RelativeToolTip": "ArbolGeneral.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-22T00:34:01.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Util.cs",
+              "DocumentMoniker": "D:\\CSharp\\ApiCatalogoBase\\Util.cs",
+              "RelativeDocumentMoniker": "Util.cs",
+              "ToolTip": "D:\\CSharp\\ApiCatalogoBase\\Util.cs",
+              "RelativeToolTip": "Util.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-20T01:33:22.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ItemCat.cs",
+              "DocumentMoniker": "D:\\CSharp\\ApiCatalogoBase\\ItemCat.cs",
+              "RelativeDocumentMoniker": "ItemCat.cs",
+              "ToolTip": "D:\\CSharp\\ApiCatalogoBase\\ItemCat.cs",
+              "RelativeToolTip": "ItemCat.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAkwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-19T02:54:52.707Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Estrategia.cs",
+              "DocumentMoniker": "D:\\CSharp\\ApiCatalogoBase\\Estrategia.cs",
+              "RelativeDocumentMoniker": "Estrategia.cs",
+              "ToolTip": "D:\\CSharp\\ApiCatalogoBase\\Estrategia.cs",
+              "RelativeToolTip": "Estrategia.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-19T02:53:05.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CSharp\\ApiCatalogoBase\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\CSharp\\ApiCatalogoBase\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-19T02:50:40.683Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
