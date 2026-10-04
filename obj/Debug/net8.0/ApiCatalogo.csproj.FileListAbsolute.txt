@@ -34,3 +34,4 @@ C:\Users\fabia\Desktop\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\refint\ApiCatalo
 C:\Users\fabia\Desktop\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\ApiCatalogo.pdb
 C:\Users\fabia\Desktop\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\ApiCatalogo.genruntimeconfig.cache
 C:\Users\fabia\Desktop\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\ref\ApiCatalogo.dll
+C:\Users\fabia\Desktop\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\ApiCatalogo.sourcelink.json

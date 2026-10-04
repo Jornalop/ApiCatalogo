@@ -34,15 +34,6 @@ namespace tpfinal
             RecolectarProductos(arbol, listaProductos);
 
             return listaProductos;
-            
-            /* 
-            instanciar lista vacia []
-            foreach recorriendo el arbol
-
-            Agregar elementos a la lista vacía
-            aplicar recursividad para no repetir el elemento y recorrer todo el árbol
-            retorna lista con el total de los elementos
-            */
         }
         private void RecolectarProductos(ArbolGeneral<ItemCat> nodo, List<ItemCat> lista)
         {
@@ -93,16 +84,6 @@ namespace tpfinal
 
             ArbolGeneral<ItemCat> nuevoNodo = new ArbolGeneral<ItemCat>(dato);
             nodoActual.agregarHijo(nuevoNodo);
-            
-            /*
-                inserta item en ruta indicada
-                if rutaAlPadre !=exist 
-                    crea los nodos necesarios(agregarHijo())
-                    inserta elemento (ItemCat dato) en esa ubicación
-                
-                inserta elemento (ItemCat dato) en esa ubicación
-                
-            */
         }
 
         public List<ItemCat> Buscar(ArbolGeneral<ItemCat> arbol, string elementoABuscar)
@@ -138,19 +119,6 @@ namespace tpfinal
                 }
             }
             return resultados;
-            /*
-            return [];
-            instanciar lista vacia [] para guardar coincidencias
-                string s1 = "El perro no puede comer";
-                string s2 = "Perro";
-                bool b = s1.Contains(s2.ToLower());
-
-                Console.WriteLine(b);
-                agregar elementos que coinciden con la busqueda a la lista vacía 
-                aplicar recursividad para no repetir el elemento y recorrer todo el árbol
-                retorna lista con el total de los elementos
-            */
-
 		}
             
     }
