@@ -1,26 +1,96 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
+using System.Xml;
 using tp1;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Globalization;
 
 namespace tpfinal
 {
 
 	public class Estrategia
 	{
-		
+		string protocoloURL = "https";
+        string dominioURL = "www.tienda.com";
 		public string GetUrlSeoPorId(ArbolGeneral<ItemCat> arbol, int id)
         {
-            return "Implementar";
+            return buscarRutaPorId(arbol, id,"");
+            
         }
         
+        private string buscarRutaPorId(ArbolGeneral<ItemCat> arbol, int id, string rutaAcumulada)
+        {
+            string limpieza = arbol.getDatoRaiz().Nombre.ToLower().Trim();
+            TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
+            string rutaActual = textInfo.ToTitleCase(limpieza).Replace(" ","");
+
+            rutaActual = $"{rutaAcumulada}/{rutaActual}";  
+            
+            if (arbol.getDatoRaiz().Id == id)
+            {
+                return $"{protocoloURL}://{dominioURL}{rutaActual}";
+            }
+            
+            foreach (var subcategoría in arbol.getHijos())
+                {
+                    string posibleRuta = buscarRutaPorId(subcategoría, id, rutaActual);
+                        
+                    if (posibleRuta != null)
+                    {
+                        return posibleRuta;
+                    }    
+                }
+            return null!;
+        }
+
 
         public List<string> GetURLsSEO(ArbolGeneral<ItemCat> arbol)
 		{
-			return ["HOLA"];
+            List<string> urls = new List<string>();
+
+            GetURLsSEORecursivo(arbol,"",urls);
+
+            return urls;
 		}
+
+        
+        private void GetURLsSEORecursivo(ArbolGeneral<ItemCat> nodo, string rutaActual, List<string> urls)
+        {
+            if (nodo == null) return;
+
+            string nuevoCamino;
+            
+            string capitalize = nodo!.getDatoRaiz().Nombre.ToLower().Trim();
+            TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
+            string nombreSEO = textInfo.ToTitleCase(capitalize).Replace(" ", "");
+
+            if (string.IsNullOrEmpty(rutaActual))
+            {
+                nuevoCamino = nombreSEO;
+            }
+            else
+            {
+                nuevoCamino = $"{rutaActual}/{nombreSEO}";
+            }
+            
+            if (nodo.esHoja())
+            {
+                urls.Add($"{protocoloURL}://{dominioURL}/{nuevoCamino}");
+                return;
+            }
+
+            else
+            {
+                foreach (var hijo in nodo.getHijos())
+                {
+                    GetURLsSEORecursivo(hijo, nuevoCamino,urls);
+                }
+            }
+
+        }
+        
         
         public List<List<string>> ConsultaNiveles(ArbolGeneral<ItemCat> arbol)
 		{

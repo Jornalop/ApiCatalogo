@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "targets": {
     "net8.0": {
       "Microsoft.AspNetCore.OpenApi/8.0.10": {
@@ -482,23 +482,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fabia\\.nuget\\packages\\": {},
+    "C:\\Users\\JORGE\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fabia\\Desktop\\ApiCatalogo\\ApiCatalogo\\ApiCatalogo.csproj",
+      "projectUniqueName": "C:\\Users\\JORGE\\Documents\\TP sin cambios\\ApiCatalogo.csproj",
       "projectName": "ApiCatalogo",
-      "projectPath": "C:\\Users\\fabia\\Desktop\\ApiCatalogo\\ApiCatalogo\\ApiCatalogo.csproj",
-      "packagesPath": "C:\\Users\\fabia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fabia\\Desktop\\ApiCatalogo\\ApiCatalogo\\obj\\",
+      "projectPath": "C:\\Users\\JORGE\\Documents\\TP sin cambios\\ApiCatalogo.csproj",
+      "packagesPath": "C:\\Users\\JORGE\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JORGE\\Documents\\TP sin cambios\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\fabia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\JORGE\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -511,6 +511,7 @@
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "projectReferences": {}
         }
@@ -525,10 +526,11 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "10.0.200"
+      "SdkAnalysisLevel": "10.0.400"
     },
     "frameworks": {
       "net8.0": {
+        "framework": "net8.0",
         "targetAlias": "net8.0",
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": {
@@ -551,24 +553,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.25, 8.0.25]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[8.0.25, 8.0.25]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.25, 8.0.25]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.25, 8.0.25]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -577,7 +561,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.402/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

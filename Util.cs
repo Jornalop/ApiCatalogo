@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using tp1;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -33,7 +32,7 @@ namespace tpfinal
                     for (int i = 1; i <= numSubCategorias; i++)
                     {
                         ArbolGeneral<ItemCat> subCat = new ArbolGeneral<ItemCat>(
-                            new ItemCat($"{sectorNombre} - Grupo {i}", TipoElemento.Categoria)
+                            new ItemCat($"{sectorNombre} Grupo {i}", TipoElemento.Categoria)
                         );
                         sector.agregarHijo(subCat);
 
