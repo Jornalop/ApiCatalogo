@@ -31,9 +31,7 @@ namespace tpfinal
                     int numSubCategorias = rnd.Next(2, 7);
                     for (int i = 1; i <= numSubCategorias; i++)
                     {
-                        ArbolGeneral<ItemCat> subCat = new ArbolGeneral<ItemCat>(
-                            new ItemCat($"{sectorNombre} Grupo {i}", TipoElemento.Categoria)
-                        );
+                        ArbolGeneral<ItemCat> subCat = new ArbolGeneral<ItemCat>(new ItemCat($"{sectorNombre} Grupo {i}", TipoElemento.Categoria));
                         sector.agregarHijo(subCat);
 
                         // Generar productos (hojas) dentro de cada subcategoría

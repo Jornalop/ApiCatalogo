@@ -17,7 +17,6 @@ namespace tpfinal
 		public string GetUrlSeoPorId(ArbolGeneral<ItemCat> arbol, int id)
         {
             return buscarRutaPorId(arbol, id,"");
-            
         }
         
         private string buscarRutaPorId(ArbolGeneral<ItemCat> arbol, int id, string rutaAcumulada)
@@ -90,12 +89,37 @@ namespace tpfinal
             }
 
         }
-        
-        
         public List<List<string>> ConsultaNiveles(ArbolGeneral<ItemCat> arbol)
-		{
-            return [["Implementar"]];
+        {
+            List<List<string>> sublistaNiveles = new List<List<string>>();
+
+            if (arbol == null) return sublistaNiveles;
+
+            Cola<ArbolGeneral<ItemCat>> colaAuxiliar = new Cola<ArbolGeneral<ItemCat>>();
+            colaAuxiliar.encolar(arbol);
+
+            while (colaAuxiliar.cantidadElementos() > 0)
+            {
+                int cantidadNodosNivelActual = colaAuxiliar.cantidadElementos();
+                List<string> listaNivelActual = new List<string>();
+                
+                for (int i = 0; i < cantidadNodosNivelActual; i++)
+                {
+                   ArbolGeneral<ItemCat> nodoActual = colaAuxiliar.desencolar(); 
+
+                   listaNivelActual.Add(nodoActual.getDatoRaiz().Nombre);
+
+                   foreach(var hijo in nodoActual.getHijos())
+                    {
+                        colaAuxiliar.encolar(hijo);
+                    }
+                }
+
+                sublistaNiveles.Add(listaNivelActual);
+            }
+            return sublistaNiveles;
         }
+        
 
         public List<ItemCat> Todos(ArbolGeneral<ItemCat> arbol)
         {
