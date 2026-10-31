@@ -57,15 +57,13 @@ namespace tpfinal
         
         private void GetURLsSEORecursivo(ArbolGeneral<ItemCat> nodo, string rutaActual, List<string> urls)
         {
-            if (nodo == null) return;
-
             string nuevoCamino;
             
             string capitalize = nodo!.getDatoRaiz().Nombre.ToLower().Trim();
             TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
             string nombreSEO = textInfo.ToTitleCase(capitalize).Replace(" ", "");
 
-            if (string.IsNullOrEmpty(rutaActual))
+            if (string.IsNullOrEmpty(rutaActual)) 
             {
                 nuevoCamino = nombreSEO;
             }
@@ -131,8 +129,6 @@ namespace tpfinal
         }
         private void RecolectarProductos(ArbolGeneral<ItemCat> nodo, List<ItemCat> lista)
         {
-            if (nodo == null) return;
-
             if (nodo.getDatoRaiz().Tipo == TipoElemento.Producto)
             {
                 lista.Add(nodo.getDatoRaiz());
@@ -152,24 +148,18 @@ namespace tpfinal
             foreach (string nombreNodo in nombresRuta)
             {
                 ArbolGeneral<ItemCat>? nodoHijoEncontrado = null;
-                Cola<ArbolGeneral<ItemCat>> colaHijos = new Cola<ArbolGeneral<ItemCat>>();
 
                 foreach (ArbolGeneral<ItemCat> hijo in nodoActual.getHijos())
                 {
-                    colaHijos.encolar(hijo);
-                }
-                while (!colaHijos.esVacia())
-                {
-                    ArbolGeneral<ItemCat> hijoAuxiliar = colaHijos.desencolar();
-                    if (hijoAuxiliar.getDatoRaiz().Nombre == nombreNodo)
+                    if (hijo.getDatoRaiz().Nombre == nombreNodo)
                     {
-                        nodoHijoEncontrado = hijoAuxiliar;
+                        nodoHijoEncontrado = hijo;
                         break;
                     }
                 }
                 if (nodoHijoEncontrado == null)
                 {
-                    ItemCat nuevoDatoPadre = new ItemCat();
+                    ItemCat nuevoDatoPadre = new ItemCat(nombreNodo, TipoElemento.Categoria);
                     nodoHijoEncontrado = new ArbolGeneral<ItemCat>(nuevoDatoPadre);
                     nodoActual.agregarHijo(nodoHijoEncontrado);
                 }
@@ -184,11 +174,6 @@ namespace tpfinal
 		{
             List<ItemCat> resultados = new List<ItemCat>() ;
 
-            if(arbol == null)
-            {
-                return resultados;
-            }
-
             string terminoBusqueda = elementoABuscar.Trim().ToLower();
             
             Cola<ArbolGeneral<ItemCat>> colaNodos = new Cola<ArbolGeneral<ItemCat>>();
@@ -199,13 +184,11 @@ namespace tpfinal
                 ArbolGeneral<ItemCat> nodoActual = colaNodos.desencolar();
                 ItemCat datoActual = nodoActual.getDatoRaiz();
 
-                if(datoActual != null && !string.IsNullOrEmpty(datoActual.Nombre))
+                string nombreEnMinuscula = datoActual.Nombre.Trim().ToLower();
+                if (nombreEnMinuscula.Contains(terminoBusqueda))
                 {
-                    string nombreEnMinuscula = datoActual.Nombre.Trim().ToLower();
-                    if (nombreEnMinuscula.Contains(terminoBusqueda))
-                    {
-                        resultados.Add(datoActual);
-                    }
+                    resultados.Add(datoActual);
+                    break;
                 }
                 foreach (ArbolGeneral<ItemCat> hijo in nodoActual.getHijos())
                 {
